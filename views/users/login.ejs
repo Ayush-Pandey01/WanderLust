@@ -1,12 +1,20 @@
-
+<style>
+    .Bottum{
+        display: flex;
+        justify-content: space-between;
+    }
+    .link{
+        text-decoration: none;
+    }
+</style>
 
 
 
 <% layout("/layouts/boilerplate")%>
 
 <div class="row mt-3 ">
-    <h1 class="col-6 offset-3 mb-3">Login </h1>
-    <div class="col-6 offset-3 ">
+    <h1 class="col-lg-6 offset-lg-3 col-sm-8 offset-sm-1 mb-3">Login </h1>
+    <div class="col-lg-6 offset-lg-3 col-sm-6 offset-sm-1  ">
         <form action="/login" method="POST" class="needs-validation" novalidate>
             <div class="mb-3">  
               <label for="username" class="form-label"> <b>Username</b> </label>
@@ -27,7 +35,11 @@
                   class="form-control" 
                   required/>
               </div>
-        <button class="btn btn-success">login</button>
+              <div class="Bottum">
+                <button class="btn btn-success">login</button>
+                <a class="link" href="/signup">Don't Have Account </a>
+              </div>
+        
         </form>
     </div>
 </div>

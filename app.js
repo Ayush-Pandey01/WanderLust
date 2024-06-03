@@ -27,7 +27,7 @@ const { Server } = require("http");
 
 
 
-//MOGODB ATLUS Server
+//MOGODB ATLAS Server
 const dbUrl = process.env.ATLAS_URL;
 
 main()

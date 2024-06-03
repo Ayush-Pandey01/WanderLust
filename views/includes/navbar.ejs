@@ -1,6 +1,6 @@
 
 
-<style>
+<!-- <style>
   .search-btn {
     background-color: #fe424d;
     color: white;
@@ -13,10 +13,21 @@
     border-radius: 25px;
     padding: 0.5rem 3rem 0.5rem 3rem;
   }
+  @media (max-width: 768px) {
+  .navbar {
+    background-color: #b01010!important; /* Change this to the desired background color */
+  }
+}
+@media (max-width: 768px) {
+  .dropdown-menu {
+    background-color: #b01010!important; /* Change this to the desired background color */
+  }
+}
+
 
 </style>
 
-<nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top">
+<nav class="navbar navbar-expand-md bg-body-dark bg-primary border-bottom sticky-top">
 
     <div class="container-fluid">
       <a class="navbar-brand" href="/listings"><i class="fa-regular fa-compass"></i></a>
@@ -55,4 +66,43 @@
 
       </div>
     </div>
-  </nav>
+  </nav> -->
+
+  <!-- Nav random -->
+  
+
+    <header class="sticky-top">
+      <div id="brand"><a class="navbar-brand" href="/listings"><i class="fa-regular fa-compass"></i></a></div>
+      <nav>
+        <ul>
+          <li><a  href="/listings"><i><b>Explore</b></i></a></li>
+          <li><a href="/listings/new"><i><b>WanderLust Listing</b></i></a></li>
+          <% if(!currUser) { %>  
+          <li id="login"><a href="/signup"><b>Sign up</b></a></li>
+          <li id="signup"><a href="/login"><b>Log in</b></a></li>
+          <% } %> <% if(currUser) { %>
+          <li id="signup"><a href="/logout"><b>logout</b></a></li>
+          <% } %>
+        </ul>
+      </nav>
+      <div id="hamburger-icon" onclick="toggleMobileMenu(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+        <ul class="mobile-menu">
+          <li><a  href="/listings"><i><b>Explore</b></i></a></li>
+          <li><a href="/listings/new"><i><b>WanderLust Listing</b></i></a></li>
+          <% if(!currUser) { %>  
+          <li id="login"><a href="/signup"><b>Sign up</b></a></li>
+          <li id="signup"><a href="/login"><b>Log in</b></a></li>
+          <% } %> <% if(currUser) { %>
+          <li id="signup"><a href="/logout"><b>logout</b></a></li>
+          <% } %>
+        </ul>
+      </div>
+    </header>
+    <script src="app.js"></script>
+  
+
+
+
