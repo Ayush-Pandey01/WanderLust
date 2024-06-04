@@ -101,9 +101,10 @@
                         <div class="card col-lg-5 col-md-5 col-sm-5 ms-2 p-0 mb-3 pb-2">
                             <h5 class="card-header">@<b><%= review.author.username %></b></h5>
                             <div class="card-body p-2">
-                              <h5 class="card-title"><%= review.comment %></h5>
+                              
                               <p class="card-text starability-result" data-rating="<%= review.rating %>">
                                 Rated: 3 stars</p>
+                                <h5 class="card-title"><%= review.comment %></h5>
                                 <% if(currUser && review.author._id.equals(currUser._id)){ %>
                                 <form class="mb-3" method="POST" action="/listing/<%= listing._id %>/review/<%=review._id %>?_method=DELETE">
                                     <button class="btn btn-danger">DELETE</button>
