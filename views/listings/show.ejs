@@ -106,9 +106,10 @@
                                 Rated: 3 stars</p>
                                 <h5 class="card-title"><%= review.comment %></h5>
                                 <% if(currUser && review.author._id.equals(currUser._id)){ %>
-                                <form class="mb-3" method="POST" action="/listing/<%= listing._id %>/review/<%=review._id %>?_method=DELETE">
-                                    <button class="btn btn-danger">DELETE</button>
-                                </form>
+                                  <form class="mb-3" method="POST"
+                                  action="/listings/<%= listing._id %>/reviews/<%= review._id %>?_method=DELETE">
+                              <button class="btn btn-danger">Delete</button>
+                            </form>
                                 <% } %>
                             </div>
                           </div>
